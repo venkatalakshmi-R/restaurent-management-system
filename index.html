@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">🍽️ Restaurant Management</div>
+    <p>Good Food. Happy Dining.</p>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <p class="eyebrow">WELCOME TO OUR RESTAURANT</p>
+            <h1>Your Favourite Food,<br>One Click Away!</h1>
+            <p>Explore our menu and enjoy delicious food.</p>
+        </div>
+
+        <div class="special">
+            <span>⭐ TODAY'S SPECIAL</span>
+            <h2>Paneer Butter Masala</h2>
+            <p>Chef's Special - ₹180</p>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Our Menu</h2>
+
+        <input type="search" id="search"
+               placeholder="Search food...">
+
+        <div class="filters">
+            <button class="filter active" data-category="All">All</button>
+            <button class="filter" data-category="Main Course">Main Course</button>
+            <button class="filter" data-category="Snacks">Snacks</button>
+            <button class="filter" data-category="Drinks">Drinks</button>
+        </div>
+
+        <div id="menu" class="menu-grid"></div>
+    </section>
+
+    <section class="two-col">
+
+        <section class="panel">
+            <h2>Order Summary</h2>
+
+            <div id="cart">
+                Your cart is empty.
+            </div>
+
+            <h3>Total: ₹<span id="total">0</span></h3>
+
+            <button id="placeOrder" class="primary">
+                Place Order
+            </button>
+
+            <p id="orderMessage"></p>
+            <div id="statusBox" hidden>
+                🟢 Order Received
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Table Reservation</h2>
+
+            <form id="reservationForm">
+
+                <label>Your Name</label>
+                <input type="text" id="customerName"
+                       placeholder="Enter your name" required>
+
+                <label>Reservation Date</label>
+                <input type="date" id="reservationDate" required>
+
+                <label>Number of Guests</label>
+                <input type="number" id="guests"
+                       min="1" max="20" value="2" required>
+
+                <button type="submit" class="primary">
+                    Book Table
+                </button>
+
+            </form>
+
+            <p id="reservationMessage"></p>
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+    Restaurant Management System | FSD Mini Project
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
